@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31729.503
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Probleme-setul_1-21ex", "Probleme-setul_1-21ex\Probleme-setul_1-21ex.csproj", "{D954122A-A91E-413B-A2CB-CDADFDAB455D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D954122A-A91E-413B-A2CB-CDADFDAB455D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D954122A-A91E-413B-A2CB-CDADFDAB455D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D954122A-A91E-413B-A2CB-CDADFDAB455D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D954122A-A91E-413B-A2CB-CDADFDAB455D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {155D17F9-5D17-4C49-9DB7-886D241665AF}
+	EndGlobalSection
+EndGlobal
