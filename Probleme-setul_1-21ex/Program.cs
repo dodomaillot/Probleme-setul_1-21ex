@@ -27,6 +27,10 @@ namespace Probleme_setul_1_21ex
                     case 3:
                         Exercice_3();
                         break;
+
+                    case 4:
+                        Exercice_4();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -109,6 +113,17 @@ namespace Probleme_setul_1_21ex
                 Console.Write("Yes he can");
             else
                 Console.Write("No he can't");
+        }
+
+        private static void Exercice_4()
+        {
+            int an;
+            Console.WriteLine("Which year do you want to know if it's a leap one ?");
+            an = int.Parse(Console.ReadLine());
+            if (an % 4 == 0 && an % 100 != 0)
+                Console.Write($"{an} is a leap year");
+            else
+                Console.Write($"{an} is not a leap year");
         }
     }
 }
