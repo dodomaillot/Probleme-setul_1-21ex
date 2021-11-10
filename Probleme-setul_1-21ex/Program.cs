@@ -23,6 +23,10 @@ namespace Probleme_setul_1_21ex
                     case 2:
                         Exercice_2();
                         break;
+
+                    case 3:
+                        Exercice_3();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -91,6 +95,20 @@ namespace Probleme_setul_1_21ex
             }
             if(nosolution == true)
                 Console.Write(" The solution is not a whole number or they aren't solution");
+        }
+
+        private static void Exercice_3()
+        {
+            int n, k;
+
+            Console.WriteLine("The number n can be divided by the number k ?");
+            Console.Write("n = "); n = int.Parse(Console.ReadLine());
+            Console.Write("k = "); k = int.Parse(Console.ReadLine());
+
+            if (n % k == 0)
+                Console.Write("Yes he can");
+            else
+                Console.Write("No he can't");
         }
     }
 }
