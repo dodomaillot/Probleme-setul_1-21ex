@@ -55,6 +55,10 @@ namespace Probleme_setul_1_21ex
                     case 10:
                         Exercice_10();
                         break;
+
+                    case 11:
+                        Exercice_11();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -245,6 +249,23 @@ namespace Probleme_setul_1_21ex
                 Console.Write(n + " is a prime number");
             else
                 Console.Write(n + " is not a prime number");
+        }
+
+        private static void Exercice_11()
+        {
+            int n, reverse = 0, p = 1;
+            Console.Write("What number do you want to reverse ? ");
+            n = int.Parse(Console.ReadLine());
+            Console.Write("The reverse of " + n);
+            while (n != 0)
+            {
+                if (n / 10 != 0)
+                    reverse = (reverse * p + n % 10) * 10;
+                else
+                    reverse = reverse * p + n % 10;
+                n /= 10;
+            }
+            Console.Write(" is " + reverse);
         }
     }
 }
