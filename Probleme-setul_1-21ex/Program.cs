@@ -39,6 +39,10 @@ namespace Probleme_setul_1_21ex
                     case 6:
                         Exercice_6();
                         break;
+
+                    case 7:
+                        Exercice_7();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -175,6 +179,18 @@ namespace Probleme_setul_1_21ex
                 Console.Write("Yes, they can");
             else
                 Console.Write("No, they can't");
+        }
+        
+        private static void Exercice_7()
+        {
+            int a, b, aux;
+            Console.WriteLine("swap two numbers(with another variable");
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+            aux = a;
+            a = b;
+            b = aux;
+            Console.Write("a = {0} and b = {1}", a, b);
         }
     }
 }
