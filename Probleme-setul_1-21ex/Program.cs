@@ -35,6 +35,10 @@ namespace Probleme_setul_1_21ex
                     case 5:
                         Exercice_5();
                         break;
+
+                    case 6:
+                        Exercice_6();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -157,6 +161,20 @@ namespace Probleme_setul_1_21ex
             }
             if (exist == false)
                 Console.Write("The position doesn't exist. The number is to small.");
+        }
+
+        private static void Exercice_6()
+        {
+            int a, b, c;
+            Console.WriteLine("Can the values a, b and c be sides of a triangle ?");
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+            Console.Write("c = "); c = int.Parse(Console.ReadLine());
+
+            if (a + b > c && a + c > b && b + c > a)
+                Console.Write("Yes, they can");
+            else
+                Console.Write("No, they can't");
         }
     }
 }
