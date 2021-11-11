@@ -43,6 +43,10 @@ namespace Probleme_setul_1_21ex
                     case 7:
                         Exercice_7();
                         break;
+
+                    case 8:
+                        Exercice_8();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -184,12 +188,22 @@ namespace Probleme_setul_1_21ex
         private static void Exercice_7()
         {
             int a, b, aux;
-            Console.WriteLine("swap two numbers(with another variable");
+            Console.WriteLine("swap two numbers(with another variable)");
             Console.Write("a = "); a = int.Parse(Console.ReadLine());
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
             aux = a;
             a = b;
             b = aux;
+            Console.Write("a = {0} and b = {1}", a, b);
+        }
+
+        private static void Exercice_8()
+        {
+            int a, b;
+            Console.WriteLine("swap two numbers(without another variable)");
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+            (a, b) = (b, a);
             Console.Write("a = {0} and b = {1}", a, b);
         }
     }
