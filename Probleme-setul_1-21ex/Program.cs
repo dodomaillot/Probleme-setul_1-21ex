@@ -31,6 +31,10 @@ namespace Probleme_setul_1_21ex
                     case 4:
                         Exercice_4();
                         break;
+
+                    case 5:
+                        Exercice_5();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -120,10 +124,39 @@ namespace Probleme_setul_1_21ex
             int an;
             Console.WriteLine("Which year do you want to know if it's a leap one ?");
             an = int.Parse(Console.ReadLine());
-            if (an % 4 == 0 && an % 100 != 0)
+            if (an % 4 == 0 && an % 100 != 0 || an % 400 == 0)
                 Console.Write($"{an} is a leap year");
             else
                 Console.Write($"{an} is not a leap year");
+        }
+
+        private static void Exercice_5()
+        {
+            int nb, k, cont = 0;
+            bool exist = false;
+
+            Console.Write("Give a number: "); nb = int.Parse(Console.ReadLine());
+            Console.Write("display the digit of the position k(right to left), k = ");
+            k = int.Parse(Console.ReadLine());
+            
+            if(nb == 0 && k == 1)
+            {
+                Console.Write("=> " + nb % 10);
+                exist = true;
+            }
+            while (nb != 0)
+            {
+                cont++;
+                if(cont == k)
+                {
+                    Console.Write("=> " + nb % 10);
+                    exist = true;
+                    break;
+                }
+                nb /= 10;
+            }
+            if (exist == false)
+                Console.Write("The position doesn't exist. The number is to small.");
         }
     }
 }
