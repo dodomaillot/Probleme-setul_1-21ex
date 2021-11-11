@@ -59,6 +59,10 @@ namespace Probleme_setul_1_21ex
                     case 11:
                         Exercice_11();
                         break;
+
+                    case 12:
+                        Exercice_12();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -266,6 +270,27 @@ namespace Probleme_setul_1_21ex
                 n /= 10;
             }
             Console.Write(" is " + reverse);
+        }
+
+        private static void Exercice_12()
+        {
+            int n, a, b, cont = 0;
+            
+            Console.WriteLine("How many numbers are divisible by n in the interval [a,b] ?");
+            Console.Write("n = "); n = int.Parse(Console.ReadLine());
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+
+            if (a > b)
+                (a, b) = (b, a);
+            for (int i = a; i <= b; i++)
+                if (i % n == 0)
+                    cont++;
+
+            if (cont == 0)
+                Console.Write("No number is divisible by " + n + " in the interval");
+            else
+                Console.Write("They are " + cont + " divible by " + n + " in the interval");
         }
     }
 }
