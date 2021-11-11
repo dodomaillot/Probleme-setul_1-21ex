@@ -47,6 +47,10 @@ namespace Probleme_setul_1_21ex
                     case 8:
                         Exercice_8();
                         break;
+
+                    case 9:
+                        Exercice_9();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -205,6 +209,18 @@ namespace Probleme_setul_1_21ex
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
             (a, b) = (b, a);
             Console.Write("a = {0} and b = {1}", a, b);
+        }
+
+        private static void Exercice_9()
+        {
+            int n;
+            Console.WriteLine("Display all the dividers of n:");
+            Console.Write("n = ");n = int.Parse(Console.ReadLine());
+
+            for (int i = 1; i <= n / 2; i++)
+                if (n % i == 0)
+                    Console.WriteLine(i);
+            Console.Write(n);
         }
     }
 }
