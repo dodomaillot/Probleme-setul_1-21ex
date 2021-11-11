@@ -51,6 +51,10 @@ namespace Probleme_setul_1_21ex
                     case 9:
                         Exercice_9();
                         break;
+
+                    case 10:
+                        Exercice_10();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -221,6 +225,26 @@ namespace Probleme_setul_1_21ex
                 if (n % i == 0)
                     Console.WriteLine(i);
             Console.Write(n);
+        }
+
+        private static void Exercice_10()
+        {
+            int n;
+            bool isprim = true;
+
+            Console.Write("What number do you want to know if it's a prime one ? ");
+            n = int.Parse(Console.ReadLine());
+
+            for(int i = 2; i<=n/2;i++)
+                if(n%i==0)
+                {
+                    isprim = false;
+                    break;
+                }
+            if (isprim == true)
+                Console.Write(n + " is a prime number");
+            else
+                Console.Write(n + " is not a prime number");
         }
     }
 }
