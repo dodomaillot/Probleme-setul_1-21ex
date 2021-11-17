@@ -63,6 +63,10 @@ namespace Probleme_setul_1_21ex
                     case 12:
                         Exercice_12();
                         break;
+
+                    case 13:
+                        Exercice_13();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -291,6 +295,22 @@ namespace Probleme_setul_1_21ex
                 Console.Write("No number is divisible by " + n + " in the interval");
             else
                 Console.Write("They are " + cont + " divible by " + n + " in the interval");
+        }
+
+        private static void Exercice_13()
+        {
+            int year1, year2, nr = 0;
+
+            Console.WriteLine("How many leaps years are between the year1 and year2 ?");
+            Console.Write("year1 = "); year1 = int.Parse(Console.ReadLine());
+            Console.Write("year2 = "); year2 = int.Parse(Console.ReadLine());
+
+            if (year1 > year2)
+                (year1, year2) = (year2, year1);
+            for (int i = year1; i <= year2; i++)
+                if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
+                    nr++;
+            Console.Write("They are/is " + nr + " leap(s) year(s)");
         }
     }
 }
