@@ -71,6 +71,10 @@ namespace Probleme_setul_1_21ex
                     case 14:
                         Exercice_14();
                         break;
+
+                    case 15:
+                        Exercice_15();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -334,6 +338,23 @@ namespace Probleme_setul_1_21ex
                 Console.Write("Yes, it is");
             else
                 Console.Write("No, it isn't");
+        }
+
+        private static void Exercice_15()
+        {
+            int a, b, c;
+            Console.WriteLine("Give 3 numbers which will be arranged in ascending order");
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+            Console.Write("c = "); c = int.Parse(Console.ReadLine());
+
+            if (a > b)
+                (a, b) = (b, a);
+            if (b > c)
+                (b, c) = (c, b);
+            if (a > b)
+                (a, b) = (b, a);
+            Console.Write($"{a} {b} {c}");
         }
     }
 }
