@@ -79,6 +79,10 @@ namespace Probleme_setul_1_21ex
                     case 16:
                         Exercice_16();
                         break;
+
+                    case 17:
+                        Exercice_17();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -383,6 +387,30 @@ namespace Probleme_setul_1_21ex
                     (d, e) = (e, d);
             }
             Console.Write("{0} {1} {2} {3} {4}", a, b, c, d, e);
+        }
+
+        private static void Exercice_17()
+        {
+            int a, b, gcd, a2, b2;
+            Console.WriteLine("The greatest common number and the least common multiple of two numbers a and b");
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+
+            if (a < b)
+                (a, b) = (b, a);
+            a2 = a;
+            b2 = b;
+            gcd = a % b;
+            a = b;
+            b = gcd;
+            while(gcd != 0)
+            {
+                gcd = a % b;
+                a = b;
+                b = gcd;
+            }
+            Console.Write("gcd = "+ a + "; lcm = " + a2*b2/a);
+
         }
     }
 }
