@@ -67,6 +67,10 @@ namespace Probleme_setul_1_21ex
                     case 13:
                         Exercice_13();
                         break;
+
+                    case 14:
+                        Exercice_14();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -311,6 +315,25 @@ namespace Probleme_setul_1_21ex
                 if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
                     nr++;
             Console.Write("They are/is " + nr + " leap(s) year(s)");
+        }
+
+        private static void Exercice_14()
+        {
+            int n, rem, inv = 0;
+            Console.WriteLine("Is the number n a palindrom number ?");
+            Console.Write("n = "); n = int.Parse(Console.ReadLine());
+
+            rem = n;
+            while(rem!=0)
+            {
+                inv = (inv + rem % 10) * 10;
+                rem /= 10;
+            }
+            inv /= 10;
+            if (inv == n)
+                Console.Write("Yes, it is");
+            else
+                Console.Write("No, it isn't");
         }
     }
 }
