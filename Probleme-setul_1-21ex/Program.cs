@@ -75,6 +75,10 @@ namespace Probleme_setul_1_21ex
                     case 15:
                         Exercice_15();
                         break;
+
+                    case 16:
+                        Exercice_16();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -355,6 +359,30 @@ namespace Probleme_setul_1_21ex
             if (a > b)
                 (a, b) = (b, a);
             Console.Write($"{a} {b} {c}");
+        }
+
+        private static void Exercice_16()
+        {
+            int a, b, c, d, e;
+            Console.WriteLine("Give 5 numbers which will be arranged in ascending order");
+            Console.Write("a = "); a = int.Parse(Console.ReadLine());
+            Console.Write("b = "); b = int.Parse(Console.ReadLine());
+            Console.Write("c = "); c = int.Parse(Console.ReadLine());
+            Console.Write("d = "); d = int.Parse(Console.ReadLine());
+            Console.Write("e = "); e = int.Parse(Console.ReadLine());
+
+            while(a>b || b>c || c>d || d>e)
+            {
+                if (a > b)
+                    (a, b) = (b, a);
+                if (b > c)
+                    (b, c) = (c, b);
+                if (c > d)
+                    (c, d) = (d, c);
+                if (d > e)
+                    (d, e) = (e, d);
+            }
+            Console.Write("{0} {1} {2} {3} {4}", a, b, c, d, e);
         }
     }
 }
