@@ -83,6 +83,10 @@ namespace Probleme_setul_1_21ex
                     case 17:
                         Exercice_17();
                         break;
+
+                    case 18:
+                        Exercice_18();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -411,6 +415,25 @@ namespace Probleme_setul_1_21ex
             }
             Console.Write("gcd = "+ a + "; lcm = " + a2*b2/a);
 
+        }
+
+        private static void Exercice_18()
+        {
+            int d = 2, n, p;
+            Console.WriteLine("Decomposition into prime factors of a number n");
+            Console.Write("n = "); n = int.Parse(Console.ReadLine());
+            while(n>1)
+            {
+                p = 0;
+                while(n%d==0)
+                {
+                    p++;
+                    n /= d;
+                }
+                if (p > 0)
+                    Console.Write($"{d}^{p}; ");
+                d++;
+            }
         }
     }
 }
