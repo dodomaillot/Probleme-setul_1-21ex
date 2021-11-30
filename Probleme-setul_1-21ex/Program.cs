@@ -87,6 +87,10 @@ namespace Probleme_setul_1_21ex
                     case 18:
                         Exercice_18();
                         break;
+
+                    case 19:
+                        Exercice_19();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -434,6 +438,33 @@ namespace Probleme_setul_1_21ex
                     Console.Write($"{d}^{p}; ");
                 d++;
             }
+        }
+
+        private static void Exercice_19()
+        {
+            int a, b, n;
+            bool itis = true;
+            Console.WriteLine("Determine if a number n is formed with only 2 repeating digits");
+            Console.Write("n = "); n = int.Parse(Console.ReadLine());
+            a = n % 10; n /= 10;
+            b = a;
+            while(a==b)
+            {
+                b = n % 10;
+                n /= 10;
+            }
+            while (n != 0)
+            {
+                if (n % 10 != a && n % 10 != b)
+                {
+                    itis = false;
+                }
+                n /= 10;
+            }
+            if(itis == false)
+                Console.Write("it isn\'t");
+            else
+                Console.Write("it is");
         }
     }
 }
