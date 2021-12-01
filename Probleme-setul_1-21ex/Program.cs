@@ -1,4 +1,10 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
 
 namespace Probleme_setul_1_21ex
 {
@@ -90,6 +96,10 @@ namespace Probleme_setul_1_21ex
 
                     case 19:
                         Exercice_19();
+                        break;
+
+                    case 20:
+                        Exercice_20();
                         break;
                 }
                 Console.WriteLine(); Console.WriteLine();
@@ -465,6 +475,45 @@ namespace Probleme_setul_1_21ex
                 Console.Write("it isn\'t");
             else
                 Console.Write("it is");
+        }
+
+        private static void Exercice_20()
+        {
+            //this program is limited to only 6 repetitiv numbers
+
+            int nominator, denominator, rest, nbdeci = 0, p = 1;
+            Console.WriteLine("Display a fraction in decimal form and put the repeating numbers in brackets.");
+            Console.Write("nominator: "); nominator = int.Parse(Console.ReadLine());
+            Console.Write("denominator: "); denominator = int.Parse(Console.ReadLine());
+            Console.Write($"{nominator}/{denominator} = {nominator/denominator},");
+            
+            List<int> remenber_rest = new List<int>();
+            rest = nominator % denominator;
+            remenber_rest.Add(rest);
+            
+
+            while (rest != 0)
+            {
+                nbdeci += rest * 10 / denominator * p;
+                p *= 10;
+                rest = rest * 10 % denominator;
+                if (remenber_rest.Contains(rest))
+                {
+                    int i = 0;
+                    while(nbdeci != 0)
+                    {
+                        if (remenber_rest[i] == rest)
+                            Console.Write("(");
+                        
+                        Console.Write(nbdeci % 10);
+                        nbdeci /= 10;
+                        i++;
+                    }
+                    Console.Write(")");
+                    break;
+                }
+                remenber_rest.Add(rest);
+            }
         }
     }
 }
