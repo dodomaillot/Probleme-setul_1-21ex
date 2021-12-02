@@ -101,6 +101,10 @@ namespace Probleme_setul_1_21ex
                     case 20:
                         Exercice_20();
                         break;
+
+                    case 21:
+                        Exercice_21();
+                        break;
                 }
                 Console.WriteLine(); Console.WriteLine();
             }
@@ -514,6 +518,27 @@ namespace Probleme_setul_1_21ex
                 }
                 remenber_rest.Add(rest);
             }
+        }
+
+        private static void Exercice_21()
+        {
+            int nb, prop;
+            var rand = new Random();
+            nb = rand.Next(1, 1025);
+            
+            Console.WriteLine("Try to find a number between 1 and 1024 by answering the question: The number is bigger or equal than x ?");
+
+            do
+            {
+                Console.Write("The number is bigger or equal than x ? Where x = ");
+                prop = int.Parse(Console.ReadLine());
+                if (prop > nb)
+                    Console.WriteLine("The number you are trying to find is smaller");
+                else if (prop < nb)
+                    Console.WriteLine("The number you are trying to find is bigger");
+                else
+                    Console.Write("Great !! You found the number !!");
+            } while (prop != nb);
         }
     }
 }
