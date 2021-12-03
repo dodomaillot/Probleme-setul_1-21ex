@@ -486,6 +486,7 @@ namespace Probleme_setul_1_21ex
             //this program is limited to only 6 repetitiv numbers
 
             int nominator, denominator, rest, nbdeci = 0, p = 1;
+            bool isperiod = false;
             Console.WriteLine("Display a fraction in decimal form and put the repeating numbers in brackets.");
             Console.Write("nominator: "); nominator = int.Parse(Console.ReadLine());
             Console.Write("denominator: "); denominator = int.Parse(Console.ReadLine());
@@ -494,29 +495,36 @@ namespace Probleme_setul_1_21ex
             List<int> remenber_rest = new List<int>();
             rest = nominator % denominator;
             remenber_rest.Add(rest);
-            
+            if (rest == 0)
+                Console.Write("0");
+            int i = 0;
 
-            while (rest != 0)
+            while (rest != 0 || i!=0)
             {
                 nbdeci += rest * 10 / denominator * p;
                 p *= 10;
                 rest = rest * 10 % denominator;
                 if (remenber_rest.Contains(rest))
                 {
-                    int i = 0;
+                    i = 0;
                     while(nbdeci != 0)
                     {
                         if (remenber_rest[i] == rest)
+                        {
                             Console.Write("(");
+                            isperiod = true;
+                        }
                         
                         Console.Write(nbdeci % 10);
                         nbdeci /= 10;
                         i++;
                     }
-                    Console.Write(")");
+                    if(isperiod == true)
+                        Console.Write(")");
                     break;
                 }
                 remenber_rest.Add(rest);
+                i++;
             }
         }
 
@@ -530,7 +538,7 @@ namespace Probleme_setul_1_21ex
 
             do
             {
-                Console.Write("The number is bigger or equal than x ? Where x = ");
+                Console.Write("The number is bigger, smaller or equal than x ? Where x = ");
                 prop = int.Parse(Console.ReadLine());
                 if (prop > nb)
                     Console.WriteLine("The number you are trying to find is smaller");
