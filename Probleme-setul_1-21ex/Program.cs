@@ -16,7 +16,7 @@ namespace Probleme_setul_1_21ex
             int exercice = 1;
             while (exercice != 0)
             {
-                Console.Write("Wich exercice do you want to do ? Exercice: ");
+                Console.Write("Which problem do you want to try ? Problem #: ");
                 exercice = int.Parse(Console.ReadLine());
                 Console.WriteLine();
             
@@ -172,27 +172,27 @@ namespace Probleme_setul_1_21ex
                 nosolution = false;
             }
             if(nosolution == true)
-                Console.Write(" The solution is not a whole number or they aren't solution");
+                Console.Write(" The solution is not a whole number or there is no solution");
         }
 
         private static void Exercice_3()
         {
             int n, k;
 
-            Console.WriteLine("The number n can be divided by the number k ?");
+            Console.WriteLine("Can the number n be divided by the number k ?");
             Console.Write("n = "); n = int.Parse(Console.ReadLine());
             Console.Write("k = "); k = int.Parse(Console.ReadLine());
 
             if (n % k == 0)
-                Console.Write("Yes he can");
+                Console.Write("Yes, he can");
             else
-                Console.Write("No he can't");
+                Console.Write("No, he cannot");
         }
 
         private static void Exercice_4()
         {
             int an;
-            Console.WriteLine("Which year do you want to know if it's a leap one ?");
+            Console.Write("Type a year to see if is a leap one: ");
             an = int.Parse(Console.ReadLine());
             if (an % 4 == 0 && an % 100 != 0 || an % 400 == 0)
                 Console.Write($"{an} is a leap year");
@@ -205,8 +205,8 @@ namespace Probleme_setul_1_21ex
             int nb, k, cont = 0;
             bool exist = false;
 
-            Console.Write("Give a number: "); nb = int.Parse(Console.ReadLine());
-            Console.Write("display the digit of the position k(right to left), k = ");
+            Console.Write("Type a number: "); nb = int.Parse(Console.ReadLine());
+            Console.Write("Display the digit of the k position(right to left) where k = ");
             k = int.Parse(Console.ReadLine());
             
             if(nb == 0 && k == 1)
@@ -226,7 +226,7 @@ namespace Probleme_setul_1_21ex
                 nb /= 10;
             }
             if (exist == false)
-                Console.Write("The position doesn't exist. The number is to small.");
+                Console.Write("The position does not exist. The number is to small.");
         }
 
         private static void Exercice_6()
@@ -240,13 +240,13 @@ namespace Probleme_setul_1_21ex
             if (a + b > c && a + c > b && b + c > a)
                 Console.Write("Yes, they can");
             else
-                Console.Write("No, they can't");
+                Console.Write("No, they cannot");
         }
         
         private static void Exercice_7()
         {
             int a, b, aux;
-            Console.WriteLine("swap two numbers(with another variable)");
+            Console.WriteLine("Swap two input numbers and another hidden variable");
             Console.Write("a = "); a = int.Parse(Console.ReadLine());
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
             aux = a;
@@ -258,7 +258,7 @@ namespace Probleme_setul_1_21ex
         private static void Exercice_8()
         {
             int a, b;
-            Console.WriteLine("swap two numbers(without another variable)");
+            Console.WriteLine("swap two input numbers (without another hidden variable)");
             Console.Write("a = "); a = int.Parse(Console.ReadLine());
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
             (a, b) = (b, a);
@@ -282,7 +282,7 @@ namespace Probleme_setul_1_21ex
             int n;
             bool isprim = true;
 
-            Console.Write("What number do you want to know if it's a prime one ? ");
+            Console.Write("Type a number to know if it is a prime one: ");
             n = int.Parse(Console.ReadLine());
 
             for(int i = 2; i<=n/2;i++)
@@ -300,9 +300,9 @@ namespace Probleme_setul_1_21ex
         private static void Exercice_11()
         {
             int n, reverse = 0, p = 1;
-            Console.Write("What number do you want to reverse ? ");
+            Console.Write("What number do you want to mirror ? ");
             n = int.Parse(Console.ReadLine());
-            Console.Write("The reverse of " + n);
+            Console.Write("The mirror of " + n);
             while (n != 0)
             {
                 if (n / 10 != 0)
@@ -332,14 +332,14 @@ namespace Probleme_setul_1_21ex
             if (cont == 0)
                 Console.Write("No number is divisible by " + n + " in the interval");
             else
-                Console.Write("They are " + cont + " divible by " + n + " in the interval");
+                Console.Write("There is/are " + cont + " divible by " + n + " in the interval");
         }
 
         private static void Exercice_13()
         {
             int year1, year2, nr = 0;
 
-            Console.WriteLine("How many leaps years are between the year1 and year2 ?");
+            Console.WriteLine("How many leap years are between the year1 and the year2 ?");
             Console.Write("year1 = "); year1 = int.Parse(Console.ReadLine());
             Console.Write("year2 = "); year2 = int.Parse(Console.ReadLine());
 
@@ -348,7 +348,7 @@ namespace Probleme_setul_1_21ex
             for (int i = year1; i <= year2; i++)
                 if (i % 4 == 0 && i % 100 != 0 || i % 400 == 0)
                     nr++;
-            Console.Write("They are/is " + nr + " leap(s) year(s)");
+            Console.Write("There are/is " + nr + " leap year(s)");
         }
 
         private static void Exercice_14()
@@ -367,17 +367,17 @@ namespace Probleme_setul_1_21ex
             if (inv == n)
                 Console.Write("Yes, it is");
             else
-                Console.Write("No, it isn't");
+                Console.Write("No, it is not");
         }
 
         private static void Exercice_15()
         {
             int a, b, c;
-            Console.WriteLine("Give 3 numbers which will be arranged in ascending order");
+            Console.WriteLine("Type 3 numbers to be sorting in ascending order");
             Console.Write("a = "); a = int.Parse(Console.ReadLine());
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
             Console.Write("c = "); c = int.Parse(Console.ReadLine());
-
+            
             if (a > b)
                 (a, b) = (b, a);
             if (b > c)
@@ -390,14 +390,14 @@ namespace Probleme_setul_1_21ex
         private static void Exercice_16()
         {
             int a, b, c, d, e;
-            Console.WriteLine("Give 5 numbers which will be arranged in ascending order");
+            Console.WriteLine("Type 5 numbers to be sorted in ascending order");
             Console.Write("a = "); a = int.Parse(Console.ReadLine());
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
             Console.Write("c = "); c = int.Parse(Console.ReadLine());
             Console.Write("d = "); d = int.Parse(Console.ReadLine());
             Console.Write("e = "); e = int.Parse(Console.ReadLine());
 
-            while(a>b || b>c || c>d || d>e)
+            /*while(a>b || b>c || c>d || d>e)
             {
                 if (a > b)
                     (a, b) = (b, a);
@@ -407,14 +407,18 @@ namespace Probleme_setul_1_21ex
                     (c, d) = (d, c);
                 if (d > e)
                     (d, e) = (e, d);
-            }
+            }*/
+
+            int[] arr = { a, b, c, d, e };
+            Array.Sort(arr);
+
             Console.Write("{0} {1} {2} {3} {4}", a, b, c, d, e);
         }
 
         private static void Exercice_17()
         {
             int a, b, gcd, a2, b2;
-            Console.WriteLine("The greatest common number and the least common multiple of two numbers a and b");
+            Console.WriteLine("The greatest common divider and the least common multiple of two numbers a and b");
             Console.Write("a = "); a = int.Parse(Console.ReadLine());
             Console.Write("b = "); b = int.Parse(Console.ReadLine());
 
@@ -438,7 +442,7 @@ namespace Probleme_setul_1_21ex
         private static void Exercice_18()
         {
             int d = 2, n, p;
-            Console.WriteLine("Decomposition into prime factors of a number n");
+            Console.WriteLine("Breaking down an integer number n into its prime factor(s)");
             Console.Write("n = "); n = int.Parse(Console.ReadLine());
             while(n>1)
             {
@@ -452,13 +456,15 @@ namespace Probleme_setul_1_21ex
                     Console.Write($"{d}^{p}; ");
                 d++;
             }
+            if (n == 0 || n == 1)
+                Console.Write(n);
         }
 
         private static void Exercice_19()
         {
             int a, b, n;
             bool itis = true;
-            Console.WriteLine("Determine if a number n is formed with only 2 repeating digits");
+            Console.WriteLine("Check if a whole number n is made with only 2 repeating digits");
             Console.Write("n = "); n = int.Parse(Console.ReadLine());
             a = n % 10; n /= 10;
             b = a;
@@ -476,9 +482,9 @@ namespace Probleme_setul_1_21ex
                 n /= 10;
             }
             if(itis == false)
-                Console.Write("it isn\'t");
+                Console.Write("It is not");
             else
-                Console.Write("it is");
+                Console.Write("It is");
         }
 
         private static void Exercice_20()
@@ -534,7 +540,7 @@ namespace Probleme_setul_1_21ex
             var rand = new Random();
             nb = rand.Next(1, 1025);
             
-            Console.WriteLine("Try to find a number between 1 and 1024 by answering the question: The number is bigger or equal than x ?");
+            Console.WriteLine("Try to find a number between 1 and 1024 by answering the question: The number is bigger, smaller or equal than x ?");
 
             do
             {
